@@ -1,5 +1,19 @@
 include vehicle-form__wrapper
 include vehicle-form__label
 include vehicle-form__input
-include vehicle-form__radio
+include vehicle-form__select
 include vehicle-form__submit
+
+- var inpCounter = 0;
+
+mixin vehicle-form(formObj)
+    form.vehicle-form(action="#")
+        each item in formObj
+            +vehicle-form__wrapper
+                if (item.type)
+                    +vehicle-form__label(item.id, item.name)
+                    +vehicle-form__input(item.type, item.id, item.name, item.count)
+                else
+                    +vehicle-form__select(item.name, item.options)
+        +vehicle-form__wrapper
+            +vehicle-form__submit

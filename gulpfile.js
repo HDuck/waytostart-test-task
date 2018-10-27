@@ -68,7 +68,7 @@ gulp.task('watch', () => {
     gulp.watch([
             `${srcDest}/**/*.pug`,
             `${srcDest}/**/*.scss`],
-        ['pug', 'scss']);
+        ['pug', 'scss', 'concat:css']);
 });
 
 gulp.task('cleanHtml', () => {

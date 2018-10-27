@@ -1,0 +1,11 @@
+mixin vehicle-form__label(id, name)
+    if (name === 'colors')
+        label(
+            class="vehicle-form__label"
+            for=id
+        ) цвет
+    else
+        label(
+            class="vehicle-form__label"
+            for=id
+        )=name
