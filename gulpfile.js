@@ -15,8 +15,8 @@ const devMode = argv.env !== 'production';
 const srcDest = './src';
 const devDest = './dist';
 const prodDest = './docs';
-const devBuild = ['pug', 'scss', 'concat:css', 'copyFonts', 'copyImg'];
-const prodBuild = ['clean', 'pug', 'scss', 'concat:css', 'minify-css', 'copyFonts', 'copyImg'];
+const devBuild = ['pug', 'concat:css', 'copyFonts', 'copyImg'];
+const prodBuild = ['pug', 'scss', 'concat:css', 'minify-css', 'copyFonts', 'copyImg'];
 
 gulp.task('serverSync', ['build'], () => {
     browSync.init({
@@ -25,19 +25,18 @@ gulp.task('serverSync', ['build'], () => {
         }
     });
 
-    gulp.watch([`${srcDest}/**/*.scss`], ['scss']);
+    gulp.watch([`${srcDest}/**/*.scss`], ['concat:css']);
     gulp.watch([`${srcDest}/**/*.pug`], ['pug']);
 });
 
 gulp.task('scss', () => {
-    gulp.src(`${srcDest}/main.scss`)
+    return gulp.src(`${srcDest}/main.scss`)
         .pipe(scss().on('error', scss.logError))
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
         }))
-        .pipe(gulp.dest(`${srcDest}/css`))
-        .pipe(browSync.stream());
+        .pipe(gulp.dest(`${srcDest}/css`));
 });
 
 gulp.task('pug', ['cleanHtml'], () => {
@@ -47,7 +46,8 @@ gulp.task('pug', ['cleanHtml'], () => {
             locals:
             { 
                 devMode: devMode,
-                imgDir: './img'
+                imgDir: './img',
+                fontDir: './fonts'
             }
         }))
         .pipe(rename((path) => { path.basename = 'index' }))
@@ -55,13 +55,14 @@ gulp.task('pug', ['cleanHtml'], () => {
         .pipe(browSync.stream());
 });
 
-gulp.task('concat:css', ['cleanCss'], () => {
+gulp.task('concat:css', ['cleanCss', 'scss'], () => {
     gulp.src([
             `${srcDest}/css/normalize.css`,
             `${srcDest}/css/main.css`
         ])
         .pipe(concat('styles.css'))
-        .pipe(gulp.dest(`${devMode ? devDest : prodDest}/css`));
+        .pipe(gulp.dest(`${devMode ? devDest : prodDest}/css`))
+        .pipe(browSync.stream());
 });
 
 gulp.task('watch', () => {
