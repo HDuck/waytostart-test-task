@@ -3,16 +3,16 @@ mixin vehicle-form__input(type, id, name, count)
         - var i = 1;
         while (i <= count)
             input(
-                class="vehicle-form__input"
-                type=type
-                id=`${id}-${i}`
+                class="vehicle-form__input",
+                type=type,
+                id=`${id}-${i}`,
                 name=name
             )
             - i++
     else
         input(
-            class="vehicle-form__input"
-            type=type
-            id=id
+            class="vehicle-form__input",
+            type=type,
+            id=id,
             placeholder=name
         )
