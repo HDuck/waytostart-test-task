@@ -1,0 +1,107 @@
+@font-face {
+  font-family: "RobotoL";
+  src: url(fontDir/Roboto-Light.ttf); }
+
+.text_font_RoboL {
+  font-family: "RobotoL", sans-serif;
+  font-weight: 300; }
+
+@font-face {
+  font-family: "RobotoR";
+  src: url(fontDir/Roboto-Regular.ttf); }
+
+.text_font_RoboR {
+  font-family: "RobotoR", sans-serif;
+  font-weight: 400; }
+
+@font-face {
+  font-family: "RobotoM";
+  src: url(fontDir/Roboto-Medium.ttf); }
+
+.text_font_RoboB {
+  font-family: "RobotoM", sans-serif;
+  font-weight: 500; }
+
+@font-face {
+  font-family: "RobotoB";
+  src: url(fontDir/Roboto-Bold.ttf); }
+
+.text_font_RoboB {
+  font-family: "RobotoB", sans-serif;
+  font-weight: 700; }
+
+.text_color_black {
+  color: #282d30; }
+
+.text_color_gray {
+  color: #999999; }
+
+.text_color_lightgray {
+  color: #8b9497; }
+
+.text_color_white {
+  color: white; }
+
+.text_size_11px {
+  font-size: 11px; }
+
+.text_size_12px {
+  font-size: 12px; }
+
+.text_size_13px {
+  font-size: 13px; }
+
+.text_size_14px {
+  font-size: 14px; }
+
+.text_size_15px {
+  font-size: 15px; }
+
+.text_size_16px {
+  font-size: 16px; }
+
+.text_size_20px {
+  font-size: 20px; }
+
+.text_size_40px {
+  font-size: 40px; }
+
+.header {
+  width: 100%;
+  background-color: #282d30;
+  padding-top: 13px; }
+
+.logo {
+  display: block;
+  width: 297px;
+  margin: 0 4%; }
+
+.welcome {
+  margin: 29px 0;
+  line-height: 1;
+  text-align: center;
+  letter-spacing: -0.2px; }
+
+.footer {
+  width: 100%;
+  background-color: #282d30;
+  padding: 43px 0 36px; }
+
+.copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 auto; }
+
+.copyright > span:first-child {
+  text-transform: uppercase; }
