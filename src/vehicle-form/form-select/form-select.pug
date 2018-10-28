@@ -1,0 +1,11 @@
+include form-select__dummy-inp
+include form-select__list
+include form-select__item
+
+mixin form-select(name, optionsArr)
+    input(class="form-select", type="hidden")
+    +form-select__dummy-inp(name)
+    +form-select__list
+        - var i = 0;
+        while i < optionsArr.length
+            +form-select__item(optionsArr[i++])

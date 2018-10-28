@@ -1,17 +1,16 @@
-mixin vehicle-form__input(type, id, name, count)
-    if (count && type === 'radio')
-        - var i = 1;
-        while (i <= count)
-            input(
-                class="vehicle-form__input",
-                type=type,
-                id=`${id}-${i}`,
-                name=name
-            )
-            - i++
+- var radioNum = 0;
+
+mixin vehicle-form__input(type, id, name)
+    if (type === 'radio')
+        input(
+            class="text_font_RoboR text_size_12px text_color_black vehicle-form__input",
+            type=type,
+            id=`${id}-${++radioNum}`,
+            name=name
+        )
     else
         input(
-            class="vehicle-form__input",
+            class="text_font_RoboR text_size_12px text_color_black vehicle-form__input",
             type=type,
             id=id,
             placeholder=name

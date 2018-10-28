@@ -1,8 +1,9 @@
 include vehicle-form__wrapper
 include vehicle-form__label
 include vehicle-form__input
-include vehicle-form__select
+include vehicle-form__radio
 include vehicle-form__submit
+include form-select/form-select
 
 - var inpCounter = 0;
 
@@ -10,10 +11,17 @@ mixin vehicle-form(formObj)
     form.vehicle-form(action="#")
         each item in formObj
             +vehicle-form__wrapper
-                if (item.type)
+                if (item.type === 'radio')
                     +vehicle-form__label(item.id, item.name)
-                    +vehicle-form__input(item.type, item.id, item.name, item.count)
+                    - var i = 0;
+                    while i < item.count
+                        +vehicle-form__radio
+                            +vehicle-form__input(item.type, item.id, item.name)
+                        - i++;
+                else if (item.type)
+                    +vehicle-form__label(item.id, item.name)
+                    +vehicle-form__input(item.type, item.id, item.name)
                 else
-                    +vehicle-form__select(item.name, item.options)
+                    +form-select(item.name, item.options)
         +vehicle-form__wrapper
             +vehicle-form__submit

@@ -1,0 +1,14 @@
+.vehicle-form__label {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    margin-bottom: 6px;
+    padding-left: 10px;
+    text-transform: capitalize;
+    visibility: hidden;
+}
+
+.vehicle-form__wrapper:nth-child(5) > .vehicle-form__label {
+    margin-bottom: 10px;
+    visibility: visible;
+}

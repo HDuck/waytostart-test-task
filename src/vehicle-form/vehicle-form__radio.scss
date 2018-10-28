@@ -1,0 +1,34 @@
+.vehicle-form__radio {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 19px;
+    height: 19px;
+    margin: 0 21px 4px 0;
+    border: 0px solid transparent;
+    border-radius: 50%;
+    transition: border-width .3s ease 0s, margin .3s ease 0s;
+
+    &:nth-child(2) {
+        background-color: white;
+        border: 1px solid rgb(220, 220, 220);
+    }
+
+    &:nth-child(3) {
+        background-color: black;
+    }
+
+    &:nth-child(4) {
+        background-color: rgb(153, 153, 153);
+    }
+
+    &:nth-child(5) {
+        background-color: rgb(215, 67, 69);
+    }
+
+    &:nth-child(6) {
+        background-color: rgb(136, 197, 4);
+    }
+}
+
+@import './vehicle-form__radio_checked';

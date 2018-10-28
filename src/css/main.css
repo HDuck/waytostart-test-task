@@ -77,10 +77,177 @@
   margin: 0 4%; }
 
 .welcome {
-  margin: 29px 0;
+  margin: 28px 0 5px;
   line-height: 1;
   text-align: center;
   letter-spacing: -0.2px; }
+
+.vehicle-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+  padding: 0 11px 0 9px; }
+
+.vehicle-form__input {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 8px;
+  border: 1px solid gainsboro;
+  border-bottom-width: 2px;
+  outline: none; }
+  .vehicle-form__input:placeholder-shown {
+    color: #999999;
+    text-transform: capitalize; }
+
+.vehicle-form__radio > .vehicle-form__input {
+  width: auto;
+  opacity: 0; }
+
+.vehicle-form__label {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  margin-bottom: 6px;
+  padding-left: 10px;
+  text-transform: capitalize;
+  visibility: hidden; }
+
+.vehicle-form__wrapper:nth-child(5) > .vehicle-form__label {
+  margin-bottom: 10px;
+  visibility: visible; }
+
+.vehicle-form__radio {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 19px;
+  height: 19px;
+  margin: 0 21px 4px 0;
+  border: 0px solid transparent;
+  border-radius: 50%;
+  -webkit-transition: border-width .3s ease 0s, margin .3s ease 0s;
+  transition: border-width .3s ease 0s, margin .3s ease 0s; }
+  .vehicle-form__radio:nth-child(2) {
+    background-color: white;
+    border: 1px solid gainsboro; }
+  .vehicle-form__radio:nth-child(3) {
+    background-color: black; }
+  .vehicle-form__radio:nth-child(4) {
+    background-color: #999999; }
+  .vehicle-form__radio:nth-child(5) {
+    background-color: #d74345; }
+  .vehicle-form__radio:nth-child(6) {
+    background-color: #88c504; }
+
+.vehicle-form__radio_checked {
+  margin: -7px 18px 0 -5px;
+  border: 4px solid #c4092f; }
+
+.vehicle-form__radio:nth-child(2).vehicle-form__radio_checked {
+  margin: -3px 18px 0 -3px;
+  border: 4px solid #c4092f; }
+
+.vehicle-form__submit {
+  width: 100%;
+  padding: 11px 0 12px 26px;
+  text-align: left;
+  text-transform: uppercase;
+  border: none;
+  background-color: #c4092f;
+  border-radius: 4px;
+  outline: none; }
+  .vehicle-form__submit::after {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    margin: 0 0 2px 6px;
+    border-right: 3px solid white;
+    border-top: 3px solid white;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg); }
+
+.vehicle-form__wrapper {
+  position: relative;
+  margin-top: 11px; }
+  .vehicle-form__wrapper:first-child {
+    width: 100%; }
+  .vehicle-form__wrapper:nth-child(2) {
+    width: 47%; }
+  .vehicle-form__wrapper:nth-child(3) {
+    width: 47%; }
+  .vehicle-form__wrapper:nth-child(4) {
+    width: 100%; }
+  .vehicle-form__wrapper:nth-child(5) {
+    width: 100%;
+    margin-top: 17px; }
+  .vehicle-form__wrapper:nth-child(6) {
+    width: 47%;
+    margin-top: 25px; }
+  .vehicle-form__wrapper:last-child {
+    width: 47%;
+    margin-top: 25px; }
+
+.form-select__dummy-inp {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 12px 8px;
+  text-transform: capitalize;
+  text-decoration: none;
+  border: 1px solid gainsboro;
+  border-bottom-width: 2px; }
+  .form-select__dummy-inp::after {
+    content: "";
+    position: absolute;
+    top: 17px;
+    right: 15px;
+    border: 6px solid transparent;
+    border-top-color: black; }
+
+.form-select__list {
+  position: absolute;
+  top: 22px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid gainsboro;
+  border-top-width: 2px;
+  background-color: white;
+  padding: 0 9px 9px;
+  opacity: 0;
+  -webkit-transition: opacity .3s ease 0s;
+  transition: opacity .3s ease 0s; }
+
+.form-select__list_visible {
+  border-top-color: black;
+  opacity: 1; }
+
+.form-select__item {
+  list-style-type: none;
+  padding: 7px 0 2px; }
 
 .footer {
   width: 100%;

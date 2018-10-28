@@ -1,0 +1,18 @@
+.vehicle-form__input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px 8px;
+    border: 1px solid rgb(220, 220, 220);
+    border-bottom-width: 2px;
+    outline: none;
+
+    &:placeholder-shown {
+        color: rgb(153, 153, 153);
+        text-transform: capitalize;
+    }
+}
+
+.vehicle-form__radio > .vehicle-form__input {
+    width: auto;
+    opacity: 0;
+}

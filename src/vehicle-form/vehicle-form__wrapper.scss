@@ -1,0 +1,35 @@
+.vehicle-form__wrapper {
+    position: relative;
+    margin-top: 11px;
+
+    &:first-child {
+        width: 100%;
+    }
+
+    &:nth-child(2) {
+        width: 47%;
+    }
+
+    &:nth-child(3) {
+        width: 47%;
+    }
+
+    &:nth-child(4) {
+        width: 100%;
+    }
+
+    &:nth-child(5) {
+        width: 100%;
+        margin-top: 17px;
+    }
+
+    &:nth-child(6) {
+        width: 47%;
+        margin-top: 25px;
+    }
+
+    &:last-child {
+        width: 47%;
+        margin-top: 25px;
+    }
+}

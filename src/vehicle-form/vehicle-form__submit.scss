@@ -1,0 +1,21 @@
+.vehicle-form__submit {
+    width: 100%;
+    padding: 11px 0 12px 26px;
+    text-align: left;
+    text-transform: uppercase;
+    border: none;
+    background-color: rgb(196, 9, 47);
+    border-radius: 4px;
+    outline: none;
+
+    &::after {
+        content: "";
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        margin: 0 0 2px 6px;
+        border-right: 3px solid white;
+        border-top: 3px solid white;
+        transform: rotate(45deg);
+    }
+}

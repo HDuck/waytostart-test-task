@@ -1,0 +1,20 @@
+.form-select__dummy-inp {
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 12px 8px;
+    text-transform: capitalize;
+    text-decoration: none;
+    border: 1px solid rgb(220, 220, 220);
+    border-bottom-width: 2px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 17px;
+        right: 15px;
+        border: 6px solid transparent;
+        border-top-color: black;
+    }
+}

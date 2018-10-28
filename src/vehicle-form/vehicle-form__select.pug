@@ -1,9 +1,0 @@
-mixin vehicle-form__select(name, optionsArr)
-    select(class="vehicle-form__select", name=name)
-        - var i = 0;
-        while (i <= optionsArr.length)
-            if (i === 0)
-                option(value="", selected, disabled, hidden) Статус
-            else
-                option(value=optionsArr[i-1])= optionsArr[i-1]
-            - i++;

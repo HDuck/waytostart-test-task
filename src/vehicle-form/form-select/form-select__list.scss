@@ -1,0 +1,14 @@
+.form-select__list {
+    position: absolute;
+    top: 22px;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid rgb(220, 220, 220);
+    border-top-width: 2px;
+    background-color: white;
+    padding: 0 9px 9px;
+    opacity: 0;
+    transition: opacity .3s ease 0s;
+}
+
+@import './form-select__list_visible';

@@ -1,0 +1,15 @@
+.vehicle-form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+    padding: 0 11px 0 9px;
+}
+
+@import './vehicle-form__input';
+@import './vehicle-form__label';
+@import './vehicle-form__radio';
+@import './vehicle-form__submit';
+@import './vehicle-form__wrapper';
+@import './form-select/form-select';
