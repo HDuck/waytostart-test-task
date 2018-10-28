@@ -1,0 +1,8 @@
+mixin vehicle-table__name(name, bonus)
+    if (bonus)
+        .venicle-table__name
+            span= name
+            span!= bonus
+    else
+        .venicle-table__name
+            span= name
