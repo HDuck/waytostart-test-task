@@ -8,10 +8,7 @@
         selection: { name: 'статус', options: ['В наличии', 'Ожидается', 'Нет в наличии'] }
     };
 
-    var vehicleTable = {
-        heading: 'Автомобили в наличии',
-        head: ['название', 'год', 'цвет', 'статус', 'цена']
-    };
+    var vehiclesHeader = ['название', 'год', 'цвет', 'статус', 'цена'];
 
     var vehicles = {
         vehicle1: {
@@ -83,6 +80,6 @@ html(lang="en")
         +content
             +welcome
             +vehicle-form(vehicleForm)
-            +vehicle-table(vehicleTable.heading, vehicleTable.head, vehicles)
+            +vehicle-table(vehiclesHeader, vehicles)
         +footer
             +copyright

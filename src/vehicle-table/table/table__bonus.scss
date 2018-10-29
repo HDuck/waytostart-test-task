@@ -1,0 +1,9 @@
+.table__bonus {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    order: 4;
+
+    & > span::before {
+        content: "+ ";
+    }
+} 

@@ -1,0 +1,15 @@
+.table {
+    width: 100%;
+}
+
+@import './table__header';
+@import './table__head-item';
+@import './table__content';
+@import './table__row';
+@import './table__name';
+@import './table__bonus';
+@import './table__color';
+@import './table__price';
+@import './table__year';
+@import './table__status';
+@import './table__delete';

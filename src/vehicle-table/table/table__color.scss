@@ -1,0 +1,11 @@
+.table__color {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    order: 2;
+}
+
+@import './table__color_white';
+@import './table__color_black';
+@import './table__color_gray';
+@import './table__color_cherry';
+@import './table__color_grass';

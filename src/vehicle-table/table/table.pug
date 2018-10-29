@@ -1,0 +1,29 @@
+include table__header
+include table__content
+include table__row
+include table__head-item
+include table__name
+include table__bonus
+include table__year
+include table__color
+include table__status
+include table__price
+include table__delete
+
+- var i = 0;
+
+mixin table(headArr, vehiclesObj)
+    .table
+        +table__header
+            while i < headArr.length
+                +table__head-item(headArr[i++])
+        +table__content
+            each item in vehiclesObj
+                +table__row
+                    +table__name(item.name)
+                    +table__bonus(item.bonus)
+                    +table__year(item.year)
+                    +table__color(item.color)
+                    +table__status(item.status)
+                    +table__price(item.price)
+                    +table__delete
