@@ -1,5 +1,15 @@
 @media (max-width: 320px) {
+    
     .logo {
         margin-left: 2%;
+    }
+}
+
+@media (min-width: 515px) {
+    
+    .logo {
+        display: block;
+        width: 494px;
+        margin: 0 auto;
     }
 }
