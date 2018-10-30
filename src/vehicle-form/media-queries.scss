@@ -3,3 +3,10 @@
         padding-left: 12%;
     }
 }
+
+@media (min-width: 420px) {
+    .vehicle-form__submit {
+        text-align: center;
+        padding-left: 0;
+    }
+}

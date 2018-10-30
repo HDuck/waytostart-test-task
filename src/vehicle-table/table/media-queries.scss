@@ -9,3 +9,13 @@
     }
 
 }
+
+@media (min-width: 420px) {
+    .table__row {
+        grid-template-columns: 57px auto 80px 92px;
+    }
+
+    .table__name {
+        margin-right: 0;
+    }
+}
