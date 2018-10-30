@@ -1,8 +1,11 @@
 .table__row {
+    box-sizing: border-box;
     display: grid;
-    grid-template-columns: 1fr 1fr 40px 110px;
-    grid-auto-rows: 50px;
-    padding: 20px 19px 25px;
+    grid-template-columns: 57px 103px auto 92px;
+    grid-template-rows: 40px 35px;
+    grid-auto-rows: 45px;
+    width: 100%;
+    padding: 19px 30px 16px 18px;
     background-color: rgb(245, 246, 246);
     border-top: 1px solid rgb(152, 152, 152);
 }

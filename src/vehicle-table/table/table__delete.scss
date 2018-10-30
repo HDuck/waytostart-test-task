@@ -2,10 +2,18 @@
     grid-column-start: 4;
     grid-column-end: 5;
     order: 7;
-    height: 30px;
+    justify-self: end;
+    align-self: center;
+    margin-right: -10px;
+    padding: 0 10px;
+    height: 28px;
     background-color: rgb(40, 45, 48);
     border: none;
     border-radius: 15px;
     outline: none;
 }
-  
+
+
+.table__bonus ~ .table__delete {
+    margin-top: 10px;
+}
