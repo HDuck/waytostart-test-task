@@ -1,0 +1,11 @@
+@media (max-width: 320px) {
+    .table__row {
+        grid-template-columns: 57px 83px auto 92px;
+    }
+    
+    .table__name {
+        margin-right: 0;
+
+    }
+
+}

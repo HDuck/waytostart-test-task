@@ -76,6 +76,10 @@
   width: 297px;
   margin: 0 4%; }
 
+@media (max-width: 320px) {
+  .logo {
+    margin: 0 2%; } }
+
 .welcome {
   margin: 28px 0 5px;
   line-height: 1;
@@ -169,7 +173,7 @@
 
 .vehicle-form__submit {
   width: 100%;
-  padding: 11px 0 12px 26px;
+  padding: 7% 0 7% 16.5%;
   text-align: left;
   text-transform: uppercase;
   border: none;
@@ -248,6 +252,10 @@
 .form-select__item {
   list-style-type: none;
   padding: 7px 0 2px; }
+
+@media (max-width: 320px) {
+  .vehicle-form__submit {
+    padding-left: 12%; } }
 
 .vehicle-table {
   width: 100%;
@@ -399,6 +407,12 @@
 
 .table__bonus ~ .table__delete {
   margin-top: 10px; }
+
+@media (max-width: 320px) {
+  .table__row {
+    grid-template-columns: 57px 83px auto 92px; }
+  .table__name {
+    margin-right: 0; } }
 
 .footer {
   width: 100%;
