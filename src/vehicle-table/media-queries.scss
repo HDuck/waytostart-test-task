@@ -2,7 +2,7 @@
 
     .vehicle-table {
         width: auto;
-        margin: 0 10px 0 9px;
+        margin: 0 10px 30px 9px;
     }
 
     .vehicle-table__heading {
@@ -23,5 +23,16 @@
             margin-right: 11px;
             background-color: rgb(139, 148, 151);
         }
+    }
+}
+
+@media (min-width: 978px) {
+
+    .vehicle-table{
+        margin-bottom: 50px;
+    }
+
+    .vehicle-table__heading {
+        margin-top: 155px;
     }
 }

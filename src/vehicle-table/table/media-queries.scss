@@ -147,7 +147,7 @@
 @media (min-width: 720px) {
 
     .table__header {
-        grid-template-columns: 265px 35px 60px 114px 105px 70px;
+        grid-template-columns: auto 35px 60px 114px 105px 70px;
     }
 
     .table__head-item {
@@ -155,17 +155,21 @@
         &:nth-child(2) {
             justify-self: start;
         }
-        
+
         &:nth-child(3) {
             margin-left: -4px;
         }
     }
 
     .table__row {
-        grid-template-columns: 265px 35px 55px 120px 105px 75px;
+        grid-template-columns: auto 35px 55px 120px 105px 75px;
         grid-template-rows: 20px;
         grid-auto-rows: 30px;
         padding: 13.5px 30px 10px 16px;
+
+        &:last-child {
+            border-bottom: 1px solid rgb(152, 152, 152);
+        }
     }
 
     .table__name,
@@ -219,11 +223,58 @@
         padding: 0 13px;
         background-color: transparent;
         color: rgb(139, 148, 151);
+        transition: background-color .1s ease 0s, color .1s ease 0s;
 
-        &:focus {
+        &:active {
             background-color: rgb(40, 45, 48);
             color: white;
-            transition: background-color .1s ease 0s, color .1s ease 0s;
+        }
+    }
+}
+
+@media (min-width: 978px) {
+
+    .table__header {
+        grid-template-columns: 458px 35px 98px 116px 105px 70px;
+    }
+
+    .table__row {
+        grid-template-columns: 458px 35px 97px 118px 105px auto;
+        grid-auto-rows: 20px;
+        padding-right: 40px;
+    }
+
+    .table__head-item {
+
+        &:nth-child(4) {
+            margin-left: -8px;
+        }
+    }
+
+    .table__color {
+        justify-self: center;
+    }
+
+    .table__status {
+        align-self: start;
+        margin-left: -7px;
+    }
+}
+
+@media (min-width: 1280px) {
+    
+    .table__delete {
+
+        &:hover {
+            background-color: rgb(40, 45, 48);
+            color: white;
+        }
+
+        &:active {
+            padding: 0 12px;
+            background-color: transparent;
+            color: rgb(40, 45, 48);
+            border: 1px solid rgb(40, 45, 48);
         }
     }
 }
