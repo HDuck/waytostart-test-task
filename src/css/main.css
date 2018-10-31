@@ -548,7 +548,7 @@
     display: grid;
     grid-template-columns: 252px auto auto 90px 90px 75px;
     grid-template-rows: 45px;
-    padding: 0 30px 0 18px;
+    padding: 0 30px 0 16px;
     background-color: #c4092f;
     border-radius: 5px 5px 0 0; }
   .table__head-item {
@@ -565,6 +565,57 @@
     grid-column-start: 1;
     grid-column-end: 2; } }
 
+@media (min-width: 720px) {
+  .table__header {
+    grid-template-columns: 265px 35px 60px 114px 105px 70px; }
+  .table__head-item:nth-child(2) {
+    justify-self: start; }
+  .table__head-item:nth-child(3) {
+    margin-left: -4px; }
+  .table__row {
+    grid-template-columns: 265px 35px 55px 120px 105px 75px;
+    grid-template-rows: 20px;
+    grid-auto-rows: 30px;
+    padding: 13.5px 30px 10px 16px; }
+  .table__name,
+  .table__year,
+  .table__status,
+  .table__price {
+    -ms-flex-item-align: start;
+    align-self: start; }
+    .table__name > span,
+    .table__year > span,
+    .table__status > span,
+    .table__price > span {
+      font-size: 15px; }
+  .table__name > span {
+    letter-spacing: -.2px; }
+  .table__bonus ~ .table__year,
+  .table__bonus ~ .table__status,
+  .table__bonus ~ .table__price {
+    margin-top: 1px; }
+  .table__year {
+    justify-self: start;
+    margin: -1px 0 0 1px; }
+  .table__color {
+    margin-top: -1px; }
+  .table__status {
+    margin: -1px 0 0 4px; }
+  .table__price > span {
+    letter-spacing: -.1px; }
+  .table__delete {
+    margin-top: -3.5px;
+    font-size: 15px;
+    margin-right: -20px;
+    padding: 0 13px;
+    background-color: transparent;
+    color: #8b9497; }
+    .table__delete:focus {
+      background-color: #282d30;
+      color: white;
+      -webkit-transition: background-color .1s ease 0s, color .1s ease 0s;
+      transition: background-color .1s ease 0s, color .1s ease 0s; } }
+
 @media (min-width: 650px) {
   .vehicle-table {
     width: auto;
@@ -572,12 +623,14 @@
   .vehicle-table__heading {
     display: block;
     text-transform: uppercase;
-    margin-top: 49px; }
+    margin-top: 37px;
+    margin-bottom: 23px;
+    letter-spacing: -.6px; }
     .vehicle-table__heading::before {
       content: "";
       position: relative;
-      left: 0;
-      top: 2px;
+      left: 1px;
+      top: 1px;
       display: inline-block;
       height: 18px;
       width: 3px;

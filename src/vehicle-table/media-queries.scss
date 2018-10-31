@@ -8,13 +8,15 @@
     .vehicle-table__heading {
         display: block;
         text-transform: uppercase;
-        margin-top: 49px;
+        margin-top: 37px;
+        margin-bottom: 23px;
+        letter-spacing: -.6px;
 
         &::before {
             content: "";
             position: relative;
-            left: 0;
-            top: 2px;
+            left: 1px;
+            top: 1px;
             display: inline-block;
             height: 18px;
             width: 3px;
@@ -23,4 +25,3 @@
         }
     }
 }
-  
