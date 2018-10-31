@@ -1,0 +1,26 @@
+@media (min-width: 650px) {
+
+    .vehicle-table {
+        width: auto;
+        margin: 0 10px 0 9px;
+    }
+
+    .vehicle-table__heading {
+        display: block;
+        text-transform: uppercase;
+        margin-top: 49px;
+
+        &::before {
+            content: "";
+            position: relative;
+            left: 0;
+            top: 2px;
+            display: inline-block;
+            height: 18px;
+            width: 3px;
+            margin-right: 11px;
+            background-color: rgb(139, 148, 151);
+        }
+    }
+}
+  
