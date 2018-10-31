@@ -11,3 +11,52 @@
         padding-left: 0;
     }
 }
+
+@media (min-width: 720px) {
+
+    .vehicle-form__wrapper {
+
+        &:first-child,
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(5),
+        &:nth-child(6),
+        &:last-child {
+            width: 31.5%;
+        }
+
+        &:nth-child(6),
+        &:last-child {
+            margin-top: 30px;
+        }
+
+        &:first-child {
+            order: 1;
+        }
+
+        &:nth-child(2) {
+            order: 3;
+        }
+
+        &:nth-child(3) {
+            order: 2;
+        }
+
+        &:nth-child(4) {
+            order: 4;
+        }
+
+        &:nth-child(5) {
+            order: 5;
+            align-self: flex-start;
+        }
+
+        &:nth-child(6) {
+            order: 6;
+        }
+
+        &:last-child {
+            order: 7;
+        }
+    }
+}
