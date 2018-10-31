@@ -60,3 +60,34 @@
         }
     }
 }
+
+@media (min-width: 978px) {
+    
+    .vehicle-form__wrapper {
+
+        &:first-child,
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(5),
+        &:nth-child(6),
+        &:last-child {
+            width: 32%;
+        }
+    }
+
+    .vehicle-form__input {
+        transition: border-color .2s ease 0s;
+
+        &:hover {
+            border-bottom-color: rgb(196, 9, 47);
+        }
+
+        &:focus {
+            border-bottom-color: rgb(17, 17, 17);
+        }
+    }
+
+    .vehicle-form__submit {
+        padding-left: 5%;
+    }
+}

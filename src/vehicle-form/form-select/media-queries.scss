@@ -1,0 +1,14 @@
+@media (min-width: 978px) {
+
+    .form-select__item {
+
+        & > span {
+            cursor: pointer;
+            transition: color .2s ease 0s;
+        }
+
+        & > span:hover {
+            color: rgb(17, 17, 17);
+        }
+    }
+}

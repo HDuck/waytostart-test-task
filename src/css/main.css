@@ -303,6 +303,14 @@ html {
   list-style-type: none;
   padding: 7px 0 2px; }
 
+@media (min-width: 978px) {
+  .form-select__item > span {
+    cursor: pointer;
+    -webkit-transition: color .2s ease 0s;
+    transition: color .2s ease 0s; }
+  .form-select__item > span:hover {
+    color: #111111; } }
+
 @media (max-width: 320px) {
   .vehicle-form__submit {
     padding-left: 12%; } }
@@ -347,6 +355,19 @@ html {
     -webkit-box-ordinal-group: 8;
     -ms-flex-order: 7;
     order: 7; } }
+
+@media (min-width: 978px) {
+  .vehicle-form__wrapper:first-child, .vehicle-form__wrapper:nth-child(2), .vehicle-form__wrapper:nth-child(3), .vehicle-form__wrapper:nth-child(5), .vehicle-form__wrapper:nth-child(6), .vehicle-form__wrapper:last-child {
+    width: 32%; }
+  .vehicle-form__input {
+    -webkit-transition: border-color .2s ease 0s;
+    transition: border-color .2s ease 0s; }
+    .vehicle-form__input:hover {
+      border-bottom-color: #c4092f; }
+    .vehicle-form__input:focus {
+      border-bottom-color: #111111; }
+  .vehicle-form__submit {
+    padding-left: 5%; } }
 
 .vehicle-table {
   width: 100%;
