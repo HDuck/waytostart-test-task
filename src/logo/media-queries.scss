@@ -18,6 +18,13 @@
 
     .logo {
         position: relative;
-        margin: 0 0 0 12%;
+        margin-left: 12%;
+    }
+}
+
+@media (min-width: 978px) {
+
+    .logo {
+        margin-left: 35.75%;
     }
 }

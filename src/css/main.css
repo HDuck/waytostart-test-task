@@ -106,12 +106,21 @@ html {
 @media (min-width: 720px) {
   .logo {
     position: relative;
-    margin: 0 0 0 12%; } }
+    margin-left: 12%; } }
+
+@media (min-width: 978px) {
+  .logo {
+    margin-left: 35.75%; } }
 
 .content {
   -webkit-box-flex: 1;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto; }
+
+@media (min-width: 978px) {
+  .content {
+    width: 978px;
+    margin: 0 auto; } }
 
 .welcome {
   margin: 28px 0 5px;
@@ -122,6 +131,10 @@ html {
 @media (min-width: 720px) {
   .welcome {
     margin: 65px 0 30px 4px; } }
+
+@media (min-width: 978px) {
+  .welcome {
+    margin-left: 2px; } }
 
 .vehicle-form {
   display: -webkit-box;
@@ -139,7 +152,7 @@ html {
   align-items: center;
   -ms-flex-line-pack: justify;
   align-content: space-between;
-  padding: 0 11px 0 9px; }
+  margin: 0 11px 0 9px; }
 
 .vehicle-form__input {
   -webkit-box-sizing: border-box;
@@ -585,13 +598,13 @@ html {
 
 @media (min-width: 720px) {
   .table__header {
-    grid-template-columns: 265px 35px 60px 114px 105px 70px; }
+    grid-template-columns: auto 35px 60px 114px 105px 70px; }
   .table__head-item:nth-child(2) {
     justify-self: start; }
   .table__head-item:nth-child(3) {
     margin-left: -4px; }
   .table__row {
-    grid-template-columns: 265px 35px 55px 120px 105px 75px;
+    grid-template-columns: auto 35px 55px 120px 105px 75px;
     grid-template-rows: 20px;
     grid-auto-rows: 30px;
     padding: 13.5px 30px 10px 16px; }
