@@ -9,14 +9,15 @@ const gulp = require('gulp'),
       rename = require('gulp-rename'),
       browSync = require('browser-sync'),
       imageMin = require('gulp-imagemin'),
-      argv = require('minimist')(process.argv.slice(2));
+      argv = require('minimist')(process.argv.slice(2)),
+      uglifyJs = require('gulp-uglify');
 
 const devMode = argv.env !== 'production';
 const srcDest = './src';
 const devDest = './dist';
 const prodDest = './docs';
-const devBuild = ['pug', 'concat:css', 'copyFonts', 'copyImg'];
-const prodBuild = ['pug', 'scss', 'concat:css', 'minify-css', 'copyFonts', 'copyImg'];
+const devBuild = ['pug', 'concat:css', 'concat:js', 'copyFonts', 'copyImg'];
+const prodBuild = ['pug', 'scss', 'concat:css', 'minify-css', 'concat:js', 'minify-js','copyFonts', 'copyImg'];
 
 gulp.task('serverSync', ['build'], () => {
     browSync.init({
@@ -27,6 +28,7 @@ gulp.task('serverSync', ['build'], () => {
 
     gulp.watch([`${srcDest}/**/*.scss`], ['concat:css']);
     gulp.watch([`${srcDest}/**/*.pug`], ['pug']);
+    gulp.watch([`${srcDest}/**/*.js`, `${srcDest}/**/*/*.js`], ['concat:js']);
 });
 
 gulp.task('scss', () => {
@@ -47,7 +49,7 @@ gulp.task('pug', ['cleanHtml'], () => {
             { 
                 devMode: devMode,
                 imgDir: './img',
-                fontDir: './fonts'
+                jsDir: './js'
             }
         }))
         .pipe(rename((path) => { path.basename = 'index' }))
@@ -61,7 +63,17 @@ gulp.task('concat:css', ['cleanCss', 'scss'], () => {
             `${srcDest}/css/main.css`
         ])
         .pipe(concat('styles.css'))
-        .pipe(gulp.dest(`${devMode ? devDest : prodDest}/css`))
+        .pipe(gulp.dest(`${devMode ? devDest : srcDest}/css`))
+        .pipe(browSync.stream());
+});
+
+gulp.task('concat:js', ['cleanJs'], () => {
+    gulp.src([
+            `${srcDest}/**/*.js`,
+            `${srcDest}/**/*/*.js`
+        ])
+        .pipe(concat('scripts.js'))
+        .pipe(gulp.dest(`${devMode ? devDest : srcDest}/js`))
         .pipe(browSync.stream());
 });
 
@@ -82,6 +94,11 @@ gulp.task('cleanCss', () => {
         .pipe(clean());
 });
 
+gulp.task('cleanJs', () => {
+    return gulp.src(`${devMode ? devDest : prodDest}/js/*.js`)
+        .pipe(clean());
+});
+
 gulp.task('cleanImg', () => {
     return gulp.src(`${devMode ? devDest : prodDest}/img`)
         .pipe(clean());
@@ -94,12 +111,12 @@ gulp.task('cleanFonts', () => {
 
 gulp.task('copyFonts', ['cleanFonts'], () => {
     gulp.src([
-            `${srcDest}/fonts/*.otf`,
-            `${srcDest}/fonts/*.ttf`,
-            `${srcDest}/fonts/*.woff`
+            `${srcDest}/**/*.otf`,
+            `${srcDest}/**/*.ttf`,
+            `${srcDest}/**/*.woff`
         ])
-        .pipe(copy(devMode ? devDest : prodDest, { prefix: 1 }))
-        .pipe(gulp.dest(devMode ? devDest : prodDest));
+        .pipe(copy(`${devMode ? devDest : prodDest}/fonts`, { prefix: 2 }))
+        .pipe(gulp.dest("/fonts"));
 });
 
 gulp.task('copyImg', ['cleanImg'], () => {
@@ -117,6 +134,13 @@ gulp.task('copyImg', ['cleanImg'], () => {
 gulp.task('minify-css', () => {
     gulp.src(`${srcDest}/css/styles.css`)
         .pipe(cssMinify())
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest(prodDest))
+});
+
+gulp.task('minify-js', () => {
+    gulp.src(`${srcDest}/js/scripts.js`)
+        .pipe(uglifyJs())
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest(prodDest))
 });

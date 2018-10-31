@@ -1,6 +1,6 @@
 @font-face {
   font-family: "RobotoL";
-  src: url(fontDir/Roboto-Light.ttf); }
+  src: url("../fonts/Roboto-Light.ttf"); }
 
 .text_font_RoboL {
   font-family: "RobotoL", sans-serif;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "RobotoR";
-  src: url(fontDir/Roboto-Regular.ttf); }
+  src: url("../fonts/Roboto-Regular.ttf"); }
 
 .text_font_RoboR {
   font-family: "RobotoR", sans-serif;
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: "RobotoM";
-  src: url(fontDir/Roboto-Medium.ttf); }
+  src: url("../fonts/Roboto-Medium.ttf"); }
 
 .text_font_RoboM {
   font-family: "RobotoM", sans-serif;
@@ -24,7 +24,7 @@
 
 @font-face {
   font-family: "RobotoB";
-  src: url(fontDir/Roboto-Bold.ttf); }
+  src: url("../fonts/Roboto-Bold.ttf"); }
 
 .text_font_RoboB {
   font-family: "RobotoB", sans-serif;
@@ -310,6 +310,13 @@ html {
     transition: color .2s ease 0s; }
   .form-select__item > span:hover {
     color: #111111; } }
+
+@media (min-width: 1280px) {
+  .form-select__dummy-inp {
+    -webkit-transition: border-color .2s ease 0s;
+    transition: border-color .2s ease 0s; }
+    .form-select__dummy-inp:hover {
+      border-bottom-color: #c4092f; } }
 
 @media (max-width: 320px) {
   .vehicle-form__submit {
