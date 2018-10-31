@@ -66,6 +66,19 @@
 .text_size_40px {
   font-size: 40px; }
 
+html {
+  height: 100%; }
+
+.body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%; }
+
 .header {
   width: 100%;
   background-color: #282d30;
@@ -94,6 +107,11 @@
   .logo {
     position: relative;
     margin: 0 0 0 12%; } }
+
+.content {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto; }
 
 .welcome {
   margin: 28px 0 5px;
