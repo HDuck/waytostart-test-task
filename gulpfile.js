@@ -95,7 +95,7 @@ gulp.task('cleanCss', () => {
 });
 
 gulp.task('cleanJs', () => {
-    return gulp.src(`${devMode ? devDest : prodDest}/js/*.js`)
+    return gulp.src([`${devMode ? devDest : prodDest}/js`, `${srcDest}/js`])
         .pipe(clean());
 });
 
@@ -135,14 +135,14 @@ gulp.task('minify-css', () => {
     gulp.src(`${srcDest}/css/styles.css`)
         .pipe(cssMinify())
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest(prodDest))
+        .pipe(gulp.dest(`${prodDest}/css`))
 });
 
 gulp.task('minify-js', () => {
     gulp.src(`${srcDest}/js/scripts.js`)
         .pipe(uglifyJs())
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest(prodDest))
+        .pipe(gulp.dest(`${prodDest}/js`))
 });
 
 gulp.task('build', devMode ? devBuild : prodBuild);
