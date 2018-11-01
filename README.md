@@ -10,6 +10,8 @@
 
 ## Ссылка на GitHub Pages
 
+https://hduck.github.io/waytostart-test-task/
+
 ## Использованные технологии
 
 Pug, Scss, Vanilla JS, Gulp, BEM.
