@@ -5,10 +5,10 @@
     margin-bottom: 6px;
     padding-left: 10px;
     text-transform: capitalize;
-    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s ease 0s;
 }
 
 .vehicle-form__wrapper:nth-child(5) > .vehicle-form__label {
     margin-bottom: 10px;
-    visibility: visible;
 }

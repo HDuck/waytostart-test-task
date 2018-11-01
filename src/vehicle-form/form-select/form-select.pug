@@ -3,7 +3,7 @@ include form-select__list
 include form-select__item
 
 mixin form-select(name, optionsArr)
-    input(class="form-select", type="hidden")
+    input(class="form-select", type="hidden", value="")
     +form-select__dummy-inp(name)
     +form-select__list
         - var i = 0;

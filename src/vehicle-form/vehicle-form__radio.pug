@@ -1,3 +1,5 @@
+- let radioCounter = 0;
+
 mixin vehicle-form__radio
-    .vehicle-form__radio
+    div(class="vehicle-form__radio", data-id=`${++radioCounter}`)
         block
