@@ -8,9 +8,7 @@
     .vehicle-table__heading {
         display: block;
         text-transform: uppercase;
-        margin-top: 37px;
-        margin-bottom: 23px;
-        letter-spacing: -.6px;
+        margin: 35px 0 24px;
 
         &::before {
             content: "";
@@ -20,7 +18,7 @@
             display: inline-block;
             height: 18px;
             width: 3px;
-            margin-right: 11px;
+            margin-right: 12px;
             background-color: rgb(139, 148, 151);
         }
     }

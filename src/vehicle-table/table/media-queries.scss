@@ -147,7 +147,7 @@
 @media (min-width: 720px) {
 
     .table__header {
-        grid-template-columns: auto 35px 60px 114px 105px 70px;
+        grid-template-columns: auto 35px 60px 113px 107px 75px;
     }
 
     .table__head-item {
@@ -167,6 +167,10 @@
         grid-auto-rows: 30px;
         padding: 13.5px 30px 10px 16px;
 
+        &:first-child {
+            border-top: none;
+        }
+
         &:last-child {
             border-bottom: 1px solid rgb(152, 152, 152);
         }
@@ -177,23 +181,17 @@
     .table__status,
     .table__price {
         align-self: start;
+        margin-top: 1px;
 
         & > span {
             font-size: 15px;
-        }
-    } 
-
-    .table__name {
-
-        & > span {
-            letter-spacing: -.2px;
         }
     }
 
     .table__bonus ~ .table__year,
     .table__bonus ~ .table__status,
     .table__bonus ~ .table__price {
-        margin-top: 1px;
+        margin-top: 2px;
     }
 
     .table__year {
@@ -207,13 +205,6 @@
 
     .table__status {
         margin: -1px 0 0 4px;
-    }
-
-    .table__price {
-
-        & > span {
-            letter-spacing: -.1px;
-        }
     }
 
     .table__delete {
@@ -264,6 +255,7 @@
 @media (min-width: 1280px) {
     
     .table__delete {
+        cursor: pointer;
 
         &:hover {
             background-color: rgb(40, 45, 48);

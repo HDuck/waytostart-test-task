@@ -12,3 +12,14 @@
         }
     }
 }
+
+@media (min-width: 1280px) {
+
+    .form-select__dummy-inp {
+        transition: border-color .2s ease 0s;
+        
+        &:hover {
+            border-bottom-color: rgb(196, 9, 47);
+        }
+    }
+}

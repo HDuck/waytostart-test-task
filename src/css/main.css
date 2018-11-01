@@ -63,8 +63,8 @@
 .text_size_20px {
   font-size: 20px; }
 
-.text_size_40px {
-  font-size: 40px; }
+.text_size_42px {
+  font-size: 42px; }
 
 html {
   height: 100%; }
@@ -123,14 +123,13 @@ html {
     margin: 0 auto; } }
 
 .welcome {
-  margin: 28px 0 5px;
+  margin: 29px 0 2px;
   line-height: 1;
-  text-align: center;
-  letter-spacing: -0.2px; }
+  text-align: center; }
 
 @media (min-width: 720px) {
   .welcome {
-    margin: 65px 0 30px 4px; } }
+    margin: 65px 0 28px 4px; } }
 
 @media (min-width: 978px) {
   .welcome {
@@ -158,7 +157,7 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
-  padding: 12px 8px;
+  padding: 13px 8px 11px;
   border: 1px solid gainsboro;
   border-bottom-width: 2px;
   outline: none; }
@@ -223,13 +222,14 @@ html {
 
 .vehicle-form__submit {
   width: 100%;
-  padding: 11px 0 12px 16.5%;
+  padding: 12px 0 11px 17%;
   text-align: left;
   text-transform: uppercase;
   border: none;
   background-color: #c4092f;
   border-radius: 4px;
-  outline: none; }
+  outline: none;
+  cursor: pointer; }
   .vehicle-form__submit::after {
     content: "";
     display: inline-block;
@@ -268,7 +268,7 @@ html {
   box-sizing: border-box;
   display: block;
   width: 100%;
-  padding: 12px 8px;
+  padding: 13px 9px 11px;
   text-transform: capitalize;
   text-decoration: none;
   border: 1px solid gainsboro;
@@ -294,6 +294,9 @@ html {
   opacity: 0;
   -webkit-transition: opacity .3s ease 0s;
   transition: opacity .3s ease 0s; }
+  .form-select__list:target {
+    border-top-color: black;
+    opacity: 1; }
 
 .form-select__list_visible {
   border-top-color: black;
@@ -409,11 +412,11 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: 57px 103px auto 92px;
+  grid-template-columns: 57px 103px auto 91px;
   grid-template-rows: 40px 35px;
   grid-auto-rows: 45px;
   width: 100%;
-  padding: 19px 30px 16px 18px;
+  padding: 18px 30px 17px 18px;
   background-color: #f5f6f6;
   border-top: 1px solid #989898; }
 
@@ -626,7 +629,7 @@ html {
 
 @media (min-width: 720px) {
   .table__header {
-    grid-template-columns: auto 35px 60px 114px 105px 70px; }
+    grid-template-columns: auto 35px 60px 113px 107px 75px; }
   .table__head-item:nth-child(2) {
     justify-self: start; }
   .table__head-item:nth-child(3) {
@@ -636,6 +639,8 @@ html {
     grid-template-rows: 20px;
     grid-auto-rows: 30px;
     padding: 13.5px 30px 10px 16px; }
+    .table__row:first-child {
+      border-top: none; }
     .table__row:last-child {
       border-bottom: 1px solid #989898; }
   .table__name,
@@ -643,18 +648,17 @@ html {
   .table__status,
   .table__price {
     -ms-flex-item-align: start;
-    align-self: start; }
+    align-self: start;
+    margin-top: 1px; }
     .table__name > span,
     .table__year > span,
     .table__status > span,
     .table__price > span {
       font-size: 15px; }
-  .table__name > span {
-    letter-spacing: -.2px; }
   .table__bonus ~ .table__year,
   .table__bonus ~ .table__status,
   .table__bonus ~ .table__price {
-    margin-top: 1px; }
+    margin-top: 2px; }
   .table__year {
     justify-self: start;
     margin: -1px 0 0 1px; }
@@ -662,8 +666,6 @@ html {
     margin-top: -1px; }
   .table__status {
     margin: -1px 0 0 4px; }
-  .table__price > span {
-    letter-spacing: -.1px; }
   .table__delete {
     margin-top: -3.5px;
     font-size: 15px;
@@ -694,14 +696,16 @@ html {
     margin-left: -7px; } }
 
 @media (min-width: 1280px) {
-  .table__delete:hover {
-    background-color: #282d30;
-    color: white; }
-  .table__delete:active {
-    padding: 0 12px;
-    background-color: transparent;
-    color: #282d30;
-    border: 1px solid #282d30; } }
+  .table__delete {
+    cursor: pointer; }
+    .table__delete:hover {
+      background-color: #282d30;
+      color: white; }
+    .table__delete:active {
+      padding: 0 12px;
+      background-color: transparent;
+      color: #282d30;
+      border: 1px solid #282d30; } }
 
 @media (min-width: 650px) {
   .vehicle-table {
@@ -710,9 +714,7 @@ html {
   .vehicle-table__heading {
     display: block;
     text-transform: uppercase;
-    margin-top: 37px;
-    margin-bottom: 23px;
-    letter-spacing: -.6px; }
+    margin: 35px 0 24px; }
     .vehicle-table__heading::before {
       content: "";
       position: relative;
@@ -721,7 +723,7 @@ html {
       display: inline-block;
       height: 18px;
       width: 3px;
-      margin-right: 11px;
+      margin-right: 12px;
       background-color: #8b9497; } }
 
 @media (min-width: 978px) {
